@@ -1,12 +1,6 @@
 "use client"
 import React, { useEffect } from 'react'
-import CheckoutPage from './checkout'
-import Counter from './counter'
-import MiniCart from './MiniCart'
-import ProductListing from './products/ProductListing'
-import Carousel from './Carousel'
-import Testimonials from './testimonials'
-import ProductListing_2 from './products/ProductListing_2'
+
 import ProductsByCategory from './products/ProductsByCategory'
 
 
