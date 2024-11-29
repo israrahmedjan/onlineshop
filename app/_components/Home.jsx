@@ -11,7 +11,7 @@ function HomePage() {
   return (
     <>
       
-   {/* <Carousel /> */}
+   {/* <Carousel /> slider added*/}
    <ProductsByCategory categoryId={1} limit={4} categoryname="Electronics" />
    <ProductsByCategory categoryId={4} limit={4} categoryname="Mobile Phones" />
   {/* <ProductListing category="electronics" limit={4} pagingshow={true} />
