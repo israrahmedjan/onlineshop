@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+swiper {
+    width: 100%;
+    height: 100%;
+    color:#e11d48;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    /* color: var(--swiper-theme-color); */
+    color:#e11d48;
+  }
+  
+  .autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: var(--swiper-theme-color);
+    fill: none;
+    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+    color:#e11d48;
+  }
+ /* Add this to your global CSS file (e.g., styles.css or your component-specific CSS) */
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #e11d48 !important; /* Change this to your desired color */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #e11d48; /* Change this to the hover color */
+}
+.swiper-pagination-bullet-active
+{
+background-color: #e11d48 !important;
+}
+.autoplay-progress svg{
+  stroke: #e11d48 !important;
+}
+
