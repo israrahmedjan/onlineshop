@@ -1,9 +1,9 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import { fetchProductFirst, fetchProductNext, fetchProductPrev } from '../firebase/helper';
+import { fetchProductFirst, fetchProductNext, fetchProductPrev } from '../../firebase/helper';
 import ProductCard from './ProductCard';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Loader from '../Loader';
+import Loader from '../../Loader';
 
 function ProductsByCategory({ categoryId, limit,categoryname }) {
     const [productData, setProductData] = useState(null);

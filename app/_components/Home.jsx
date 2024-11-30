@@ -1,28 +1,18 @@
 "use client"
-import React, { useEffect, useState } from 'react'
-import { getCategoryBySlug } from './firebase/helper'
+import React, { useEffect } from 'react'
 
-
+import ProductsByCategory from './products/products/ProductsByCategory'
 
 
 function HomePage() {
-  const [category,setCategory] = useState()
-  useEffect(()=>
-  {
-    const fetchCat = async()=>
-    {
-      const data = await getCategoryBySlug('mobile-phones')
-      setCategory(data);
-      console.log("Category Data!",data);
-    
-    }
-    fetchCat();
-  })
+  
 
   return (
     <>
-     <h1>This is home page.{category}</h1> 
+      
    {/* <Carousel /> slider added*/}
+   <ProductsByCategory categoryId={1} limit={4} categoryname="Electronics" />
+   <ProductsByCategory categoryId={4} limit={4} categoryname="Mobile Phones" />
   {/* <ProductListing category="electronics" limit={4} pagingshow={true} />
   <ProductListing category="home-appliances" limit={4} pagingshow={true} /> */}
   {/* <ProductListing_2 /> */}
