@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import HeaderPage from "./_components/Header";
+// import HeaderPage from "./_components/Header";
 import FooterPage from "./_components/Footer";
 import { Providers } from "./_components/redux/providers";
 import HeaderTest from "./_components/HeaderTest";
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
       >
         <Providers>
           {/* <HeaderTest /> */}
-        <HeaderPage />
+        {/* <HeaderPage /> */}
         {children}
         <FooterPage />
         </Providers>
