@@ -1,9 +1,9 @@
-import HomePage from "./_components/Home"
+// import HomePage from "./_components/Home"
 export default function Home() {
   return (
     <>
     {/* <EmailForm /> */}
-    <HomePage />
+    <h1>Hello pages</h1>
     {/* <EmailTemplate /> */}
    
     </>
