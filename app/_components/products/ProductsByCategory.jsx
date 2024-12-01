@@ -16,13 +16,11 @@ function ProductsByCategory({ categoryId, limit,categoryname }) {
     const [prodSort, setprodSort] = useState({ name: "name", direction: "asc" });
 
     // Data set ..
-    const [data,setData] = useState(null)
-  const products = useSelector((state) => state?.cart);
-  const dispatch = useDispatch();
+
   ///console.log("Data Products..",products);
 
     useEffect(() => {
-        setData(products)
+      
         const fetchProducts = async () => {
             try {
                 console.log("Product by 99999",categoryId)
