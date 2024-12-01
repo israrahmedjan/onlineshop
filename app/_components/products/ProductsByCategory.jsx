@@ -4,6 +4,7 @@ import { fetchProductFirst, fetchProductNext, fetchProductPrev } from '../fireba
 // import ProductCard from './ProductCard';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Loader from '../Loader';
+import ProductCard from './ProductCard';
 
 function ProductsByCategory({ categoryId, limit,categoryname }) {
     const [productData, setProductData] = useState(null);
@@ -132,10 +133,9 @@ function ProductsByCategory({ categoryId, limit,categoryname }) {
                 productData &&
                 <div className='grid-cols-2 md:grid-cols-4 grid gap-4'>
                     {productData.map((item, index) => (
-                        <>
-                       <div>{item.name}- <span>Price - $</span> - {item.price}</div>
-                        </>
-                        // <ProductCard key={index} item={item} />
+                     <div key={index}>
+                         <ProductCard item={item} />
+                         </div>
                     ))}
 
                 </div>
