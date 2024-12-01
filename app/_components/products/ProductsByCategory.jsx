@@ -6,7 +6,6 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Loader from '../Loader';
 import ProductCard from './ProductCard';
 import { useSelector, useDispatch } from 'react-redux';
-import { AddItems } from '../redux/CartSlice';
 
 function ProductsByCategory({ categoryId, limit,categoryname }) {
     const [productData, setProductData] = useState(null);
@@ -113,7 +112,7 @@ function ProductsByCategory({ categoryId, limit,categoryname }) {
                 {/* <p>{JSON.stringify(plusstr)}</p> */}
 
 
-
+<div>Add Items...</div>
 
                 <div className='md:mx-12 border-gray-50 border rounded-md px-2'>
                     {/* Sort Items  */}
