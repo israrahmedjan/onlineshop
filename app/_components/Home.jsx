@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect } from 'react'
+import ProductsByCategory from './products/ProductsByCategory'
 
 
 
@@ -10,8 +11,8 @@ function HomePage() {
     <>
   <h1>Home Page..</h1>    
    {/* <Carousel /> slider added*/}
-   {/* <ProductsByCategory categoryId={1} limit={4} categoryname="Electronics" />
-   <ProductsByCategory categoryId={4} limit={4} categoryname="Mobile Phones" /> */}
+  <ProductsByCategory categoryId={1} limit={4} categoryname="Electronics" />
+  
   {/* <ProductListing category="electronics" limit={4} pagingshow={true} />
   <ProductListing category="home-appliances" limit={4} pagingshow={true} /> */}
   {/* <ProductListing_2 /> */}
