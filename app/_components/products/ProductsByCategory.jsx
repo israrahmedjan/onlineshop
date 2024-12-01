@@ -114,7 +114,7 @@ function ProductsByCategory({ categoryId, limit,categoryname }) {
             <div className='border-gray-100 border py-4'>
                 {/* <p>{JSON.stringify(plusstr)}</p> */}
 
-<div>TEsting...{JSON.stringify(data,null,2)}</div>
+
 
 
                 <div className='md:mx-12 border-gray-50 border rounded-md px-2'>
