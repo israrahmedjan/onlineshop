@@ -3,6 +3,8 @@ import { Roboto } from 'next/font/google';
 import "./globals.css";
 import HeaderPage from "./_components/Header";
 import FooterPage from "./_components/Footer";
+import { Providers } from "./_components/redux/providers";
+
 
 
 export const metadata = {
@@ -22,9 +24,13 @@ export default function RootLayout({ children }) {
         className={roboto.className}
       >
      
+     <Providers>
+          {/* <HeaderTest /> */}
         <HeaderPage />
         {children}
         <FooterPage />
+        </Providers>
+        
       
       </body>
     </html>

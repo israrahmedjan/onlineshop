@@ -5,6 +5,8 @@ import { fetchProductFirst, fetchProductNext, fetchProductPrev } from '../fireba
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Loader from '../Loader';
 import ProductCard from './ProductCard';
+import { useSelector, useDispatch } from 'react-redux';
+import { AddItems } from '../redux/CartSlice';
 
 function ProductsByCategory({ categoryId, limit,categoryname }) {
     const [productData, setProductData] = useState(null);
@@ -13,7 +15,14 @@ function ProductsByCategory({ categoryId, limit,categoryname }) {
     const [hasPrev, sethasPrev] = useState(false);
     const [prodSort, setprodSort] = useState({ name: "name", direction: "asc" });
 
+    // Data set ..
+    const [data,setData] = useState(null)
+  const products = useSelector((state) => state?.cart);
+  const dispatch = useDispatch();
+  ///console.log("Data Products..",products);
+
     useEffect(() => {
+        setData(products)
         const fetchProducts = async () => {
             try {
                 console.log("Product by 99999",categoryId)
@@ -105,7 +114,7 @@ function ProductsByCategory({ categoryId, limit,categoryname }) {
             <div className='border-gray-100 border py-4'>
                 {/* <p>{JSON.stringify(plusstr)}</p> */}
 
-
+<div>TEsting...{JSON.stringify(data,null,2)}</div>
 
 
                 <div className='md:mx-12 border-gray-50 border rounded-md px-2'>
@@ -135,6 +144,7 @@ function ProductsByCategory({ categoryId, limit,categoryname }) {
                     {productData.map((item, index) => (
                      <div key={index}>
                          <ProductCard item={item} />
+                         <h1 onClick={()=>dispatch(AddItems(item))}>Add Items</h1>
                          </div>
                     ))}
 
