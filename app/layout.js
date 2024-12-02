@@ -1,12 +1,18 @@
-
 import localFont from "next/font/local";
 import { Roboto } from 'next/font/google';
 import "./globals.css";
-import HeaderPage from "./_components/Header";
-import FooterPage from "./_components/Footer";
 import { Providers } from "./_components/redux/Providers";
 
-
+const geistSans = localFont({
+  src: "./fonts/GeistVF.woff",
+  variable: "--font-geist-sans",
+  weight: "100 900",
+});
+const geistMono = localFont({
+  src: "./fonts/GeistMonoVF.woff",
+  variable: "--font-geist-mono",
+  weight: "100 900",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -24,15 +30,9 @@ export default function RootLayout({ children }) {
       <body
         className={roboto.className}
       >
-     
-
-          {/* <HeaderTest /> */}
-       <Providers>  
-        <HeaderPage />
-        {children} 
-        <FooterPage /> 
-      </Providers>
-      
+        <Providers>
+        {children}
+        </Providers>
       </body>
     </html>
   );
