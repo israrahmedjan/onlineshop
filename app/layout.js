@@ -1,3 +1,4 @@
+
 import localFont from "next/font/local";
 import { Roboto } from 'next/font/google';
 import "./globals.css";
@@ -26,12 +27,11 @@ export default function RootLayout({ children }) {
      
 
           {/* <HeaderTest /> */}
+       <Providers>  
         <HeaderPage />
-        <Providers>
-        {children} </Providers>
-        <FooterPage />
-       
-      
+        {children} 
+        <FooterPage /> 
+      </Providers>
       
       </body>
     </html>
