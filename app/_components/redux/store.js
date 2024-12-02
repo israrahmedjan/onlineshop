@@ -1,4 +1,5 @@
 // store/store.js
+'use client'
 import { configureStore } from '@reduxjs/toolkit';
 import { createSlice } from '@reduxjs/toolkit';
 
