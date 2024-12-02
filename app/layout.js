@@ -24,12 +24,13 @@ export default function RootLayout({ children }) {
         className={roboto.className}
       >
      
-<Providers>
+
           {/* <HeaderTest /> */}
         <HeaderPage />
-        {children}
+        <Providers>
+        {children} </Providers>
         <FooterPage />
-        </Providers>
+       
       
       
       </body>

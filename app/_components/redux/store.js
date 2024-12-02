@@ -1,5 +1,5 @@
 // store/store.js
-import { configureStore,combineReducers } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import { createSlice } from '@reduxjs/toolkit';
 
 // Example Slice
@@ -22,16 +22,12 @@ const counterSlice = createSlice({
 export const { increment, decrement, incrementByAmount } = counterSlice.actions;
 
 // Configure the store
-// const store = configureStore({
-//   reducer: {
-//     counter: counterSlice.reducer,
-//   },
-// });
-
-
-const store = combineReducers({
-  counter: counterSlice.reducer,
-  // Add other slices here
+const store = configureStore({
+  reducer: {
+    counter: counterSlice.reducer,
+  },
 });
+
+
 
 export default store;
