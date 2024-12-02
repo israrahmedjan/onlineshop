@@ -1,12 +1,31 @@
-
-
-
-"use client";
+// store/store.js
 import { configureStore } from '@reduxjs/toolkit';
-import CartSlice from './CartSlice'
- 
-export const store = configureStore({
-  reducer: {
-    cart: CartSlice
+import { createSlice } from '@reduxjs/toolkit';
+
+// Example Slice
+const counterSlice = createSlice({
+  name: 'counter',
+  initialState: { value: 0 },
+  reducers: {
+    increment: (state) => {
+      state.value += 1;
+    },
+    decrement: (state) => {
+      state.value -= 1;
+    },
+    incrementByAmount: (state, action) => {
+      state.value += action.payload;
+    },
   },
 });
+
+export const { increment, decrement, incrementByAmount } = counterSlice.actions;
+
+// Configure the store
+const store = configureStore({
+  reducer: {
+    counter: counterSlice.reducer,
+  },
+});
+
+export default store;
